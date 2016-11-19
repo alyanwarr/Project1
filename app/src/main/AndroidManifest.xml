@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".Logged"></activity>
         <activity android:name=".SignUp"></activity>
+        <activity android:name=".uploadimg"></activity>
     </application>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
 
 </manifest>
