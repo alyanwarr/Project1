@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.net.Uri;
 
 /**
  * Created by aly on 11/18/16.
@@ -19,6 +20,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_EMAIL = "EMAIL";
     private static final String COLUMN_PASS = "PASS";
     private static final String COLUMN_PROFILE_PIC = "PROFILE_PIC";
+    private Uri uu;
     SQLiteDatabase db;
     private static final String TABLE_CREATE = "create table users(ID integer primary key not null, " +
             "USERNAME text not null, EMAIL text not null, PASS text not null, PROFILE_PIC not null);";
@@ -42,17 +44,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
+
     public void insertUser(Users c) {
         db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         String qq = "select * from users";
         Cursor crr = db.rawQuery(qq, null);
         int count = crr.getCount();
+        Uri profilepicurl = getprofilepicurl();
         values.put(COLUMN_ID,count);
         values.put(COLUMN_USERNAME, c.getUname());
         values.put(COLUMN_EMAIL, c.getEmail());
         values.put(COLUMN_PASS, c.getPass());
-    db.insert(TABLE_NAME,null, values);
+        values.put(COLUMN_PROFILE_PIC, String.valueOf(profilepicurl));
+        db.insert(TABLE_NAME,null, values);
         db.close();
     }
 
@@ -76,6 +81,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         }
         return b ;
+    }
+
+    public void Setprofilepicurl(Uri stt) {
+       this.uu=stt;
+    }
+    public Uri getprofilepicurl() {
+        return this.uu;
     }
 }
 

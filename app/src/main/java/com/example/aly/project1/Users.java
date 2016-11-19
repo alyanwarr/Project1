@@ -6,7 +6,7 @@ package com.example.aly.project1;
 
 public class Users {
 
-    String email, uname, pass;
+    String email, uname, pass,profilepic;
 
 
 
@@ -40,5 +40,6 @@ public class Users {
         return this.pass;
 
     }
+
 }
 
