@@ -11,11 +11,11 @@ import android.widget.TextView;
 public class Logged extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.logged);
-        String username = getIntent().getStringExtra("Username");
+        setContentView(R.layout.imgupload);
+      //  String username = getIntent().getStringExtra("Username");
 
-        TextView tv = (TextView)findViewById(R.id.textView4);
-        tv.setText(username);
+      //  TextView tv = (TextView)findViewById(R.id.textView4);
+      //  tv.setText(username);
 
     }
 

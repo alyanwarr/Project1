@@ -18,9 +18,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_USERNAME = "USERNAME";
     private static final String COLUMN_EMAIL = "EMAIL";
     private static final String COLUMN_PASS = "PASS";
+    private static final String COLUMN_PROFILE_PIC = "PROFILE_PIC";
     SQLiteDatabase db;
     private static final String TABLE_CREATE = "create table users(ID integer primary key not null, " +
-            "USERNAME text not null, EMAIL text not null, PASS text not null);";
+            "USERNAME text not null, EMAIL text not null, PASS text not null, PROFILE_PIC not null);";
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }

@@ -26,8 +26,8 @@ public class Login extends AppCompatActivity {
             String password = helper.searchPass(str);
             if(pass.equals(password))
             {
-                Intent i = new Intent(this,Logged.class);
-                i.putExtra("Username", str);
+                Intent i = new Intent(this,uploadimg.class);
+               // i.putExtra("Username", str);
 
                 startActivity(i);
 

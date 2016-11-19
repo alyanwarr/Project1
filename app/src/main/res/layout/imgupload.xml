@@ -22,27 +22,12 @@
             android:layout_height="match_parent" />
 
          <Button
-             android:id="@+id/UploadImage"
+             android:id="@+id/bUploadImage"
              android:text="Upload Image"
              android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
 
-            <ImageView
-            android:id="@+id/downloadedImage"
-            android:layout_gravity="center_horizontal"
-            android:layout_width="150dp"
-            android:layout_height="150dp" />
-            <EditText
-            android:id="@+id/etDownloadName"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <Button
-         android:id="@+id/DownloadImage"
-         android:text="Download Image"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content" />
     </LinearLayout>
 
 </ScrollView>
